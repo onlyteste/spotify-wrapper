@@ -2,8 +2,14 @@
   "name": "spotify-wrapper",
   "version": "1.0.0",
   "description": "A wrapper to work with the [Spotify Web API]",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
+    "clear": "rimraf lib",
+    "build": "npm run clear && babel --out-dir lib src",
+    "build:watch": "npm run build -- --watch",
+    "build:umd": "webpack --output-filename spotify-wrapper.umd.js",
+    "build:umd:min": "webpack --output-filename spotify-wrapper.umd.min.js -p",
+    "build:all": "npm run build && npm run build:umd && npm run build:umd:min",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "mocha tests/**/*.spec.js --require @babel/register",
     "test:tdd": "mocha tests/**/*.spec.js --require @babel/register --watch",
@@ -33,9 +39,12 @@
   "author": "Rodrigo <teste.rpds95@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.4",
     "@babel/register": "^7.4.4",
+    "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
     "eslint": "^5.3.0",
     "eslint-config-airbnb": "^17.1.0",
@@ -44,7 +53,12 @@
     "eslint-plugin-react": "^7.14.2",
     "husky": "^3.0.0",
     "mocha": "^6.1.4",
-    "nyc": "^14.1.1"
+    "node-fetch": "^2.6.0",
+    "nyc": "^14.1.1",
+    "sinon": "^7.3.2",
+    "sinon-chai": "^3.3.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
   },
   "husky": {
     "hooks": {

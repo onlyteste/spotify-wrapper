@@ -2,5 +2,18 @@
     "extends": "airbnb-base",
     "plugins": [
         "import"
-    ]
+    ],
+    "env": {
+      "mocha": true
+    },
+    "overrides": {
+        "files": ["tests/*.spec.js"],
+        "rules": {
+          "padded-blocks":  "off",
+          "object-curly-newline": "off",
+          "no-trailing-spaces": "off",
+          "indent": "off"
+        }
+    }
+
 }
