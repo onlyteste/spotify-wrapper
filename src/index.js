@@ -2,6 +2,7 @@ import {
     search,
     searchArtists,
     searchAlbums,
+    searchTracks,
     searchPlaylists
 } from './search';
 
@@ -11,10 +12,11 @@ import {
     getAlbumTracks
 } from './album';
 
-export default {
+export {
     search,
     searchArtists,
     searchAlbums,
+    searchTracks,
     searchPlaylists,
     getAlbum,
     getAlbums,

@@ -3,7 +3,8 @@
 //getAlbumTracks
 
 import chai, {expect} from 'chai';
-import {getAlbum, getAlbums, getAlbumTracks} from '../src/album';
+import {getAlbum, getAlbums, getAlbumTracks} from '../src/index';
+
 import sinon from  'sinon';
 import sinonChai from 'sinon-chai';
 

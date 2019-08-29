@@ -1,7 +1,7 @@
 import chai, { expect } from 'chai';
 import sinon from 'sinon';
 import sinonChai from 'sinon-chai';
-import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/main';
+import { search, searchAlbums, searchArtists, searchTracks, searchPlaylists } from '../src/index';
 
 chai.use(sinonChai);
 
