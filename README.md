@@ -1,8 +1,6 @@
 # Spotify Wrapper
 
-[![Build Status](https://travis-ci.com/onlyteste/spotify-wrapper.svg?token=uLT3TyWApBc2zLVCM2rf&branch=master)](https://travis-ci.com/onlyteste/spotify-wrapper)
-
-[![Coverage Status](https://coveralls.io/repos/github/onlyteste/spotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/onlyteste/spotify-wrapper?branch=master)
+[![Build Status](https://travis-ci.com/onlyteste/spotify-wrapper.svg?token=uLT3TyWApBc2zLVCM2rf&branch=master)](https://travis-ci.com/onlyteste/spotify-wrapper)[![Coverage Status](https://coveralls.io/repos/github/onlyteste/spotify-wrapper/badge.svg?branch=master)](https://coveralls.io/github/onlyteste/spotify-wrapper?branch=master)
 
 A wrapper to work with the [Spotify Web API](https://developer.spotify.com/documentation/web-api/)
 
