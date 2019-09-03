@@ -8,13 +8,18 @@
 
     <div id="albums"></div>
 
-<script src="../dist/spotify-wrapper.umd.js"></script>
+    <script src="../dist/spotify-wrapper.umd.js"></script>
 
 <script>
-    const albums = spotifyWrapper.searchAlbums('skillet');
+    const spotify = new SpotifyWrapper({
+        token: 'BQDYmBxWBZJLx1mWqnr5C1W-gBsYbhdzwoHWCNhGLZauarS-p35LrZg-w3h0OUnrH5W9KN6COY6py10lS9frH9kVkcdjybL_MjjzyrTWBHBfL8KOQrqoPUnW23NY3R48rhRrmbbjKDMrNr55-HTvgBEDsCePjQlkm5vJ_vrpZluKRqgGvGAtKcQCPUEJPt__MQ'
+    });
+
+    const albums = spotify.search.albums('Skillet');
     const albumsEl = document.getElementById('albums');
 
     albums.then(data => {
+
         markup = data.albums.items.map(item =>
         `<img src='${item.images[0].url}' alt='${item.name}' />`
         ).join('');
