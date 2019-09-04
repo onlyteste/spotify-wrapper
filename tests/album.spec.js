@@ -21,7 +21,7 @@ describe('Album', () => {
         });
 
         stubedFetch = sinon.stub(global, 'fetch');
-        promise = stubedFetch.resolves({ album: 'name' });
+        promise = stubedFetch.resolves({ json: () => ({ album: 'name' }) });
     });
 
     afterEach(() => {
